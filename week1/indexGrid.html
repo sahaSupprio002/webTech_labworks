@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto;
+            gap: 10px;
+            background-color: aquamarine;
+            padding: 10px;
+        }
+        .grid-container > div{
+            background-color: bisque;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .i1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 25;
+        }
+        .i2{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 25;
+            grid-row-end: 35;
+        }
+        .i3{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 35;
+        }
+    </style>
+</head>
+<body>
+    <div style="justify-items: center;">
+        <p>
+            <img src="css_pic.png" alt="The Flexbox" height="70px" width="70px" style="border-radius: 60%; border: solid;">
+        </p>
+        <h1>FlexBox</h1>
+    </div>
+
+    <div class="grid-container">
+        <div class="i1">1</div>
+        <div class="i2">2</div>
+        <div class="i3">3</div>
+    </div>
+</body>
+</html>

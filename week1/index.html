@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            justify-content: center;
+        }
+        .flex {
+            font-size: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+        #flex1 {
+            background-color: rgb(121, 53, 53);
+            height: 70vh;
+            width: 25vw;
+        }
+        #flex2 {
+            background-color: rgb(83, 122, 67);
+            height: 30vh;
+            width: 25vw;
+        }
+        #flex3 {
+            background-color: rgb(57, 57, 153);
+            height: 50vh;
+            width: 60vw;
+        }
+        #flex4 {
+            background-color: rgb(205, 203, 78);
+            height: 50vh;
+            width: 60vw;
+        }
+    </style>
+</head>
+<body>
+    <div style="justify-items: center;">
+        <p>
+            <img src="css_pic.png" alt="The Flexbox" height="70px" width="70px" style="border-radius: 60%; border: solid;">
+        </p>
+        <h1>FlexBox</h1>
+    </div>
+
+    <div class="flex-container" style="display: flex;">
+        <div>
+            <div id="flex1" class="flex">1</div>
+            <div id="flex2" class="flex">2</div>
+        </div>
+        <div>
+            <div id="flex3" class="flex">3</div>
+            <div id="flex4" class="flex">4</div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
+
