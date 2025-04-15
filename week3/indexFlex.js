@@ -35,11 +35,11 @@ function verify() {
         return false;
     }
 
-    let hasNumberPass = /\d/.test(pass);
-    if (!hasNumberPass) {
-        document.getElementById("alart").innerHTML = "Password must include a number";
-        return false;
-    }
+    let passRegex = /^(?=.*[a-zA-Z])(?=.*\d).+$/;
+    if (!passRegex.test(pass)) {
+      document.getElementById('alart').innerText = "Password must contain both letters and numbers.";
+      return valid = false;
+    } 
 
     if(c_pass==''){
         document.getElementById("alart").innerHTML = "Enter your conformation password";
