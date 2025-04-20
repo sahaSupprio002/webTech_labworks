@@ -51,12 +51,12 @@ function verify() {
         return false;
     }
 
-    if (dob === "") {
+    if (dob == "") {
         document.getElementById("alart").innerHTML = "Select your DOB";
         return false;
     }
 
-    if (contry === "") {
+    if (contry == "") {
         document.getElementById("alart").innerHTML = "Select your Country";
         return false;
     }
