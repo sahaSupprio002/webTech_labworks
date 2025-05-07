@@ -71,7 +71,7 @@
     <div class="flex-container" style="display: flex;">
         <div>
             <div id="flex1" class="flex" >
-                <form id="form1">
+                <form id="form1" action="external.php" method="post">
 
                     <div style="text-align: center;">
                         <label style="font-size: 30px; font-weight: bold;">Register</label>
@@ -363,7 +363,7 @@
                         <a href="termsAndCondition.html">See details</a>
                     </div>
 
-                    <button type="button" id="submit" class="button" onclick="verify()">Submit</button>
+                    <button type="submit" id="submit" class="button" value="submit" onclick="return verify()">Submit</button>
 
                     <br>
                     <br>
