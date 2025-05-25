@@ -1,51 +1,96 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AQI</title>
+    
     <style>
         .flex-container{
-            display: flex;
             justify-content: center;
         }
-        
         #flex1 {
-            background-color: rgb(121, 53, 53);
-            height: 35vh;
-            width: 35vw;
+            background-color: rgb(180, 209, 226);
+            height: 460px;
+            width: 400px;
+
+            
         }
         #flex2 {
-            background-color: rgb(83, 122, 67);
-            height: 60vh;
-            width: 35vw;
+            background-color: rgb(178, 204, 168);
+            height: 260px;
+            width: 400px;
         }
         #flex3 {
-            background-color: rgb(57, 57, 153);
-            height: 95vh;
-            width: 40vw;
+            background-color: rgb(206, 185, 185);
+            height: 725px;
+            width: 400px;
         }
+        #alert{
+            background-color: azure;
+            font-weight: bold;
+            color: rgb(255, 25, 25);
+            border-radius: 5px;
+        }
+        #div_alert{
+            text-align: center;
+        }
+        button{
+            font-weight: bolder;
+            border-radius: 10px;
+            margin-left: 150px;
+        }
+        #form1 {
+            padding: 10px;
+        }
+        table,td,th{
+            border: 2px solid;
+        }
+        table{
+            margin-top: 30px; 
+            text-align: center;
+            border-collapse: collapse;
+        }
+        .align label{
+            width: 130px;
+            display: inline-block;
+        }
+        div{
+            padding-bottom: 5px;
+        }
+        #alert_log{
+            background-color: azure;
+            font-weight: bold;
+            color: rgb(255, 25, 25);
+            border-radius: 5px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
     <div style="justify-items: center;">
         <p>
-            <img src="css_pic.png" alt="The Flexbox" height="70px" width="70px" style="border-radius: 60%; border: solid;">
+            <img src="aqi.jpg" alt="AQI" height="70px" width="70px" style="border-radius: 60%; border: solid;">
         </p>
-        <h1>FlexBox</h1>
+        <h1>AQI</h1>
     </div>
 
     <div class="flex-container" style="display: flex;">
         <div>
             <div id="flex1" class="flex" >
-                <form>
-                    <div>
+                <form id="form1" action="process.php" method="post">
 
+                    <div style="text-align: center;">
+                        <label style="font-size: 30px; font-weight: bold;">Register</label>
                     </div>
+
+                    <div class="align">
                     <div>
                         <label for="fname">Full Name:</label>
                         <input type="text" class="box" id="fname" name="fname" placeholder="Full Name" required>
-                        <span class="error">* Only letters and white space allowed</span><br>
                     </div>
                     <div>
                         <label for="mail">Gmail:</label>
@@ -61,11 +106,11 @@
                     </div>
                     <div>
                         <label for="dob">DOB:</label>
-                        <input type="date" class="box" id="dob" name="dob" required>
+                        <input type="date" class="box" id="dob" name="dob" value="0" required>
                     </div>
                     <div>
-                        <label for="contry">Contry:</label>
-                        <select id="contry" name="contry" required>
+                        <label for="contry">Country:</label>
+                        <select id="contry" name="contry" class="box" style="width: 150px;" required>
                             <option value="United States">United States</option>
                             <option value="Afghanistan">Afghanistan</option>
                             <option value="Albania">Albania</option>
@@ -307,8 +352,9 @@
                             <option value="Zimbabwe">Zimbabwe</option>
                         </select>
                     </div>
+                    </div>
                     <div>
-                        <label for="gender">Gender:</label>
+                        <label for="gender" style="padding-right: 75px;">Gender:</label>
     
                         <input type="radio" id="gen_m" name="gen" value="Male">
                         <label for="gen_m">Male</label>
@@ -316,24 +362,106 @@
                         <input type="radio" id="gen_f" name="gen" value="Female">
                         <label for="gen_f">Female</label><br>
                     </div>
+                    
                     <div>
-                        <input type="checkbox" id="checkbox" name="checkbox" required>
+                        <label for="mail">Feedback:</label>
+                        <textarea id="feedback" name="feedback" class="box" rows="4" cols="50" placeholder="Enter your feedback here..." required></textarea>
+                    </div>
+                    
+                    <div>
+                        <label for="color" style="padding-right: 20px;">Select BG color:</label>
+                        <input type="color" id="color" class="box" name="color" required>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkbox" name="checkbox" value="off" required>
                         <label for="checkbox">Terms and condirions, </label>
                         <a href="termsAndCondition.html">See details</a>
                     </div>
-                    <div>
-                        <label for="color">Select BG color:</label>
-                        <input type="color" id="color" name="color" required>
-                    </div>
+
+                    <button type="submit" id="submit" class="button" name="submit" value="submit" onclick="return verify()">Submit</button>
+
                     <br>
-                    <button type="button" id="submit" class="button">Submit</button>
+                    <br>
+                    <div id="div_alert"><label id="alert"></label></div>
+
                 </form>
             </div>
-            <div id="flex2" class="flex">2</div>
+
+            <div id="flex2" class="align" >
+
+                <form action="login.php" method="post">
+                    <div style="margin-left: 130px; padding-top: 50px;">
+                        <label style="font-size: 50px;">Login</label>
+                    </div>
+
+                    <div style="padding-top: 15px; padding-left: 30px;">
+                        <label for="uname">Username: </label>
+                        <input type="text" class="box" id="uname" name="uname" placeholder=" Enter your name">
+                    </div>
+                    <div style="padding-left: 30px;">
+                        <label for="logPass">Password:</label>
+                        <input type="password" class="box" id="logPass" name="logPass" placeholder="Enter the password">
+                    </div>
+                    <br>
+                    
+                    <div id="title_submit">
+                        <button type="submit" name="submit" value="login">Login</button>
+                    </div>
+                    <br>
+                    <div style="justify-self: center;"><label id="alert_log"></label></div>
+                </form>
+
+            </div>
         </div>
-        <div id="flex3" class="flex">3</div>
+        <div id="flex3" class="flex" style="justify-items: center;">
+            <div>
+                <label style="font-size: 30px; padding-top: 50px;">City and their AQI </label>
+            </div>
+            <table style="width: 250px;">
+                <tr><th>City</th><th>AQI</th></tr>
+                <tr><td>New York</td><td>85</td></tr>
+                <tr><td>Los Angeles</td><td>120</td></tr>
+                <tr><td>Chicago</td><td>95</td></tr>
+                <tr><td>Delhi</td><td>220</td></tr>
+                <tr><td>Beijing</td><td>180</td></tr>
+                <tr><td>Tokyo</td><td>75</td></tr>
+                <tr><td>London</td><td>65</td></tr>
+                <tr><td>Paris</td><td>70</td></tr>
+                <tr><td>Mexico City</td><td>140</td></tr>
+                <tr><td>Bangkok</td><td>160</td></tr>
+                <tr><td>Jakarta</td><td>200</td></tr>
+                <tr><td>Mumbai</td><td>210</td></tr>
+                <tr><td>Cairo</td><td>175</td></tr>
+                <tr><td>Dubai</td><td>115</td></tr>
+                <tr><td>Sydney</td><td>55</td></tr>
+                <tr><td>Moscow</td><td>90</td></tr>
+                <tr><td>Seoul</td><td>130</td></tr>
+                <tr><td>São Paulo</td><td>125</td></tr>
+                <tr><td>Toronto</td><td>80</td></tr>
+                <tr><td>Berlin</td><td>60</td></tr>
+            </table>
+        </div>
     </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get("error");
+
+        if (error) {
+            document.getElementById("alert_log").innerText = error;
+
+            // Optional: clean up the URL after displaying the error
+            history.replaceState(null, "", window.location.pathname);
+        }
+    </script>
+
+
+    <script src="indexFlex.js"></script>
+
 
 </body>
 </html>
+
+
+
 
