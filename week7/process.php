@@ -35,7 +35,7 @@ function verify($email){
 }
 
 function add_cookie($color){
-  setcookie("bg_color", $color, time() + 20);
+    setcookie("bg_color", $color, time() + (30 * 24 * 60 * 60));
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -77,18 +77,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    background-color: #ddd;
                 }
                 .form-box {
                     font-size: 20px;
                     height: auto;
                     width: 400px;
-                    background-color: rgb(149, 208, 190);
+                    background-color: rgb(161, 225, 206);
                     padding: 30px;
                     border-radius: 10px;
-                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
                 }
                 .button {
                     background-color: rgb(206, 64, 64);
+                    color: white;
                     padding: 10px;
                     border-radius: 5px;
                     cursor: pointer;
@@ -107,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     text-align: center;
                 }
                 .label {
-                    width: 130px;
+                    width: 160px;
                     display: inline-block;
                     padding-left: 40px;
                 }

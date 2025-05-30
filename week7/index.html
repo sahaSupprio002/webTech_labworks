@@ -11,12 +11,13 @@
         .flex-container{
             justify-content: center;
         }
+        body{
+            background-color: #ddd;
+        }
         #flex1 {
             background-color: rgb(180, 209, 226);
             height: 460px;
-            width: 400px;
-
-            
+            width: 400px;  
         }
         #flex2 {
             background-color: rgb(178, 204, 168);
@@ -39,8 +40,9 @@
         }
         button{
             font-weight: bolder;
+            padding: 5px 50px;
             border-radius: 10px;
-            margin-left: 150px;
+            margin-left: 130px;
         }
         #form1 {
             padding: 10px;
@@ -67,6 +69,7 @@
             border-radius: 5px;
             text-align: center;
         }
+        
 
     </style>
 </head>
@@ -415,7 +418,7 @@
         </div>
         <div id="flex3" class="flex" style="justify-items: center;">
             <div>
-                <label style="font-size: 30px; padding-top: 50px;">City and their AQI </label>
+                <label style="font-size: 30px; margin-top: 50px;">City and their AQI </label>
             </div>
             <table style="width: 250px;">
                 <tr><th>City</th><th>AQI</th></tr>
@@ -430,16 +433,20 @@
                 <tr><td>Mexico City</td><td>140</td></tr>
                 <tr><td>Bangkok</td><td>160</td></tr>
                 <tr><td>Jakarta</td><td>200</td></tr>
-                <tr><td>Mumbai</td><td>210</td></tr>
-                <tr><td>Cairo</td><td>175</td></tr>
-                <tr><td>Dubai</td><td>115</td></tr>
-                <tr><td>Sydney</td><td>55</td></tr>
-                <tr><td>Moscow</td><td>90</td></tr>
-                <tr><td>Seoul</td><td>130</td></tr>
-                <tr><td>São Paulo</td><td>125</td></tr>
-                <tr><td>Toronto</td><td>80</td></tr>
-                <tr><td>Berlin</td><td>60</td></tr>
+                
             </table>
+            <div style="
+                position: absolute;
+                margin-left: 750px;
+                left: 0;
+                width: 20%;
+                height: 40px;
+                background: linear-gradient(to bottom, rgba(255,255,255,0), rgb(244, 240, 240));
+                z-index: 2;
+            "></div>
+            <br><br><br>
+            <label style="font-size: 30px;">Login to access more</label>
+            
         </div>
     </div>
 

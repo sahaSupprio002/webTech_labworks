@@ -23,7 +23,9 @@ if (isset($_POST['checkbox'])) {
     echo "
     <style>
         body {
+            background-color: #ddd;
             font-family: Arial, sans-serif;
+            background-color:".$_COOKIE['bg_color'].";
         }
         #top-bar {
             display: flex;
@@ -49,8 +51,10 @@ if (isset($_POST['checkbox'])) {
         table {
             border: 3px solid aqua;
             border-collapse: collapse;
+            background-color: #f0f8ff;
             margin: 20px auto;
             font-family: Arial, sans-serif;
+            width: 80%;
         }
         th, td {
             border: 1px solid aqua;

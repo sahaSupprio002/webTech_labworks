@@ -17,7 +17,7 @@ if (empty($_SESSION['uname'])) {
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f9f7;
+            background-color: #ddd;
         }
 
         #head {
@@ -59,8 +59,9 @@ if (empty($_SESSION['uname'])) {
             background-color: rgb(79, 75, 186);
             color: white;
             font-weight: bold;
-            padding: 10px;
+            padding: 10px 70px;
             border-radius: 5px;
+            margin-left: 30px;
         }
 
         #logout {
