@@ -1,48 +1,49 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AQI</title>
+    <title>Air Quality Index</title>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap' rel='stylesheet'>
+
     
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color:  #ebf5ff;
+        }
+        
         .flex-container{
             justify-content: center;
         }
-        body{
-            background-color: #ddd;
-        }
         #flex1 {
-            background-color: rgb(180, 209, 226);
-            height: 460px;
-            width: 400px;  
+            background-color: #958acd ;
+            height: 550px;
+            width: 400px;
+
+            
         }
         #flex2 {
-            background-color: rgb(178, 204, 168);
-            height: 260px;
+            background-color: #bec3eb ;
+            height: 280px;
             width: 400px;
         }
         #flex3 {
-            background-color: rgb(206, 185, 185);
-            height: 725px;
+            background-color: #8da4ec;
+            height: 835px;
             width: 400px;
         }
         #alert{
-            background-color: azure;
-            font-weight: bold;
             color: rgb(255, 25, 25);
-            border-radius: 5px;
+            background-color: aliceblue;
         }
         #div_alert{
             text-align: center;
         }
         button{
             font-weight: bolder;
-            padding: 5px 50px;
             border-radius: 10px;
-            margin-left: 130px;
+            margin-left: 150px;
         }
         #form1 {
             padding: 10px;
@@ -63,22 +64,20 @@
             padding-bottom: 5px;
         }
         #alert_log{
-            background-color: azure;
-            font-weight: bold;
             color: rgb(255, 25, 25);
+            background-color: aliceblue;
             border-radius: 5px;
             text-align: center;
         }
-        
 
     </style>
 </head>
 <body>
-    <div style="justify-items: center;">
+    <div style="display: flex; flex-direction: column; align-items: center;"> 
         <p>
-            <img src="aqi.jpg" alt="AQI" height="70px" width="70px" style="border-radius: 60%; border: solid;">
+            <img src="aqi.jpg" alt="AQI" height="70px" width="70px" style="border-radius: 60%; ">
         </p>
-        <h1>AQI</h1>
+        <h1>Air Quality Index</h1>
     </div>
 
     <div class="flex-container" style="display: flex;">
@@ -93,27 +92,27 @@
                     <div class="align">
                     <div>
                         <label for="fname">Full Name:</label>
-                        <input type="text" class="box" id="fname" name="fname" placeholder="Full Name" required>rexzdrnyj fds
+                        <input type="text" class="box" id="fname" name="fname" placeholder="Full Name">
                     </div>
                     <div>
                         <label for="mail">Gmail:</label>
-                        <input type="email" class="box" id="mail" name="mail" placeholder="user@gmail.com" required>
+                        <input type="email" class="box" id="mail" name="mail" placeholder="user@gmail.com">
                     </div>
                     <div>
                         <label for="pass">Password:</label>
-                        <input type="password" class="box" id="pass" name="pass" placeholder="a-z / A-Z  / 0-9" required>
+                        <input type="password" class="box" id="pass" name="pass" placeholder="a-z / A-Z  / 0-9" >
                     </div>
                     <div>
                         <label for="c_pass">Confirm Password:</label>
-                        <input type="password" class="box" id="c_pass" name="c_pass" placeholder="a-z / A-Z / 0-9" required>
+                        <input type="password" class="box" id="c_pass" name="c_pass" placeholder="a-z / A-Z / 0-9">
                     </div>
                     <div>
                         <label for="dob">DOB:</label>
-                        <input type="date" class="box" id="dob" name="dob" value="0" required>
+                        <input type="date" class="box" id="dob" name="dob" value="0">
                     </div>
                     <div>
                         <label for="contry">Country:</label>
-                        <select id="contry" name="contry" class="box" style="width: 150px;" required>
+                        <select id="contry" name="contry" class="box" style="width: 150px;">
                             <option value="United States">United States</option>
                             <option value="Afghanistan">Afghanistan</option>
                             <option value="Albania">Albania</option>
@@ -367,16 +366,16 @@
                     </div>
                     
                     <div>
-                        <label for="mail">Feedback:</label>
-                        <textarea id="feedback" name="feedback" class="box" rows="4" cols="50" placeholder="Enter your feedback here..." required></textarea>
+                        <label for="mail" name="feedback">Feedback:</label>
+                        <textarea id="feedback" name="feedback" class="box" rows="4" cols="50" placeholder="Enter your feedback here..."></textarea>
                     </div>
                     
                     <div>
                         <label for="color" style="padding-right: 20px;">Select BG color:</label>
-                        <input type="color" id="color" class="box" name="color" required>
+                        <input type="color" id="color" class="box" name="color" >
                     </div>
                     <div>
-                        <input type="checkbox" id="checkbox" name="checkbox" value="off" required>
+                        <input type="checkbox" id="checkbox" name="checkbox" value="off" >
                         <label for="checkbox">Terms and condirions, </label>
                         <a href="termsAndCondition.html">See details</a>
                     </div>
@@ -394,7 +393,7 @@
 
                 <form action="login.php" method="post">
                     <div style="margin-left: 130px; padding-top: 50px;">
-                        <label style="font-size: 50px;">Login</label>
+                        <label style="font-size: 30px; font-weight: bold;">Login</label>
                     </div>
 
                     <div style="padding-top: 15px; padding-left: 30px;">
@@ -416,11 +415,11 @@
 
             </div>
         </div>
-        <div id="flex3" class="flex" style="justify-items: center;">
+        <div id="flex3" class="flex" style="display: flex; flex-direction: column; align-items: center; color: white;">
             <div>
-                <label style="font-size: 30px; margin-top: 50px;">City and their AQI </label>
+                <br><br><label style="font-size: 30px; padding-top: 50px;"> Welcome to AQI Checker! </label>
             </div>
-            <table style="width: 250px;">
+            <table style="width: 250px; align-items: center;">
                 <tr><th>City</th><th>AQI</th></tr>
                 <tr><td>New York</td><td>85</td></tr>
                 <tr><td>Los Angeles</td><td>120</td></tr>
@@ -432,21 +431,20 @@
                 <tr><td>Paris</td><td>70</td></tr>
                 <tr><td>Mexico City</td><td>140</td></tr>
                 <tr><td>Bangkok</td><td>160</td></tr>
-                <tr><td>Jakarta</td><td>200</td></tr>
                 
             </table>
             <div style="
                 position: absolute;
-                margin-left: 750px;
-                left: 0;
+                left: 750px;
+                transform: translateY(390px); /* Move down 50px */
                 width: 20%;
                 height: 40px;
                 background: linear-gradient(to bottom, rgba(255,255,255,0), rgb(244, 240, 240));
                 z-index: 2;
             "></div>
-            <br><br><br>
-            <label style="font-size: 30px;">Login to access more</label>
-            
+            <div>
+                <br><br><label style="font-size: 25px; padding-top: 50px;"> Register now to see more... </label>
+            </div>
         </div>
     </div>
 
@@ -457,7 +455,7 @@
         if (error) {
             document.getElementById("alert_log").innerText = error;
 
-            // Optional: clean up the URL after displaying the error
+            //clean up the URL after displaying the error
             history.replaceState(null, "", window.location.pathname);
         }
     </script>
